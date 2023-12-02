@@ -111,8 +111,27 @@ body,
 
 :export {
   accentColor: $accentColor;
+  blueColor: $blueColor;
+  darkBlueColor: $darkBlueColor;
+  yellowColor: $yellowColor;
+  darkGreyColor: $darkGreyColor;
+  greyColor: $greyColor;
+  lightGreyColor: $lightGreyColor;
+  mediumGreyColor: $mediumGreyColor;
+
+  textColor: $textColor;
+  whiteTextColor: $whiteTextColor;
 }
 
 :root {
   --accentColor: #{$accentColor};
+  --blueColor: #{$blueColor};
+  --darkBlueColor: #{$darkBlueColor};
+  --yellowColor: #{$yellowColor};
+  --darkGreyColor: #{$darkGreyColor};
+  --greyColor: #{$greyColor};
+  --lightGreyColor: #{$lightGreyColor};
+  --mediumGreyColor: #{$mediumGreyColor};
+  --textColor: #{$textColor};
+  --whiteTextColor: #{$whiteTextColor};
 }
