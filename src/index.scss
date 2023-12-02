@@ -40,6 +40,7 @@ section {
   vertical-align: baseline;
   box-sizing: border-box;
   font-style: normal;
+  font-family: $baseFontFamily;
 }
 /* HTML5 display-role reset for older browsers */
 footer,
@@ -107,6 +108,12 @@ body,
   &::-webkit-scrollbar-thumb {
     background-color: $greyColor;
   }
+}
+
+.container {
+  width: 75%;
+  height: 100%;
+  margin: auto;
 }
 
 :export {
