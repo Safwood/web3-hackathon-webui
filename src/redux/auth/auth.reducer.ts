@@ -1,19 +1,17 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { State } from "redux/store";
-import { LoginData } from "utils/types";
+import { User } from "utils/types";
 
 export type AuthState = {
   authStatus: "initial" | "loading" | "error" | "resolved";
   isUserLoggedIn: boolean;
-  id: number | null;
   username: string;
   authErrorText: string;
 };
 
 const initialState = {
   authStatus: "initial",
-  isUserLoggedIn: false,
-  id: null,
+  isUserLoggedIn: true,
   username: "",
   authErrorText: ""
 } as AuthState;
@@ -22,12 +20,11 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    logIn: (state, action: PayloadAction<Required<LoginData>>) => {
+    logIn: (state, action: PayloadAction<Required<User>>) => {
       state.isUserLoggedIn = true;
       state.authStatus = "resolved";
       if (action.payload) {
         state.authErrorText = "";
-        state.id = action.payload.id;
         state.username = action.payload.username;
       }
     },
